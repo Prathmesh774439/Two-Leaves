@@ -1,0 +1,174 @@
+@font-face {
+  font-family: reckless;
+  src: url(./Assets/Fonts/RecklessNeue-Light.woff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #fbf9eb;
+  font-family: reckless;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+}
+
+section {
+  padding: clamp(2rem, 3.5vw, 6rem) 0;
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+
+.fixedNav{
+  width: 100%;
+  background-color: #2A2857;
+  min-height: 30px;
+  top: 0;
+  position: absolute;
+ text-transform: uppercase;
+ color: white;
+ font-weight: 600;
+ font-size: 1rem;
+ text-align: center;
+}
+
+nav{
+  width: 97%;
+  min-height: 9vh;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ margin: auto;
+ border: 1px solid black;
+ background-color: white;
+ border-radius: 10px;
+ z-index: 10;
+}
+
+/* .nav1{
+  background-color: lightgreen;
+} */
+/* .nav2{
+  background-color: rgb(21, 42, 88);
+} */
+/* .nav3{
+  background-color: rgb(124, 200, 43);
+} */
+
+
+.navs{
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  padding: 10px;
+}
+
+.nav1 i{
+  background-color: #AABDD8;
+  border: 1px solid black;
+ border-radius: 50%;  
+}
+
+.rev-cont{
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+
+.nav1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* desktop: show links */
+.nav-links{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* hamburger hidden on desktop */
+.menu-btn{
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px){
+
+  .menu-btn{
+    display: block; /* show hamburger */
+  }
+
+  .nav-links{
+    display: none; /* 🔥 hide ALL a tags */
+  }
+}
+
+.nav2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav2 img{
+  max-height: 80px;
+  width: auto;
+}
+
+.nav3{
+  display: flex;
+
+}
+
+
+.nav-links a{
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.nav3-icons p {
+  transform: translate(-55%, 70%);
+}
