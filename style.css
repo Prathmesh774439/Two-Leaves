@@ -16,9 +16,10 @@ html {
 
 body {
   font-family: sans-serif;
-  line-height: 1.5;
+  line-height: 1.2;
   background-color: #fbf9eb;
   font-family: reckless;
+  overflow-x: hidden;
 }
 
 .container {
@@ -64,15 +65,15 @@ section {
 }
 
 nav{
-  width: 97%;
+  width: calc(100% - 40px);
   min-height: 9vh;
   background: lightblue;
   display: flex;
   align-items: center;
-  justify-content: space-between;
- margin: auto;
+  justify-content: space-between; 
  border: 1px solid black;
  background-color: white;
+ margin: 20px;
  border-radius: 10px;
  z-index: 10;
 }
@@ -171,4 +172,301 @@ nav{
 
 .nav3-icons p {
   transform: translate(-55%, 70%);
+}
+
+.section1{
+  background-image: url(./Assets/back1.webp);
+  background-position: center;
+  display: flex;
+  flex-direction: column;;
+  align-items: flex-start;
+  border-bottom: 1px solid black;
+ 
+
+}
+
+.section1-content{
+  /* background-color: lightblue; */
+  width: 45vw;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+   gap: 10px;
+}
+
+.shop-btn, .tea-btn{
+  padding: 15px;
+  border-radius: 35px;
+  background-color: #2A2857;
+  color: white;
+ font-weight: 700;
+
+}
+
+.shop-btn:hover, .tea-btn:hover{
+ background-color: white;
+ color: black;
+ font-size: 1rem;
+ border: 1px solid black;
+ transition: all 0.3s;
+}
+
+.section2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+
+
+.section2 h1{
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+
+.section2 .best{
+  font-weight: 700;
+  background-color: #DAAEEA;
+  border: 1px solid black;
+  font-size: 2.3rem;
+   font-family: "Exo 2", sans-serif;
+   margin-top: 150px;
+   transform: rotate(-2deg);
+}
+
+/* ================= CARDS CONTAINER ================= */
+
+.cards{
+  /* background-color: lightgreen; */
+  min-height: auto;
+  display: flex;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 50px;
+  padding: 2rem;
+  cursor: grab;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  flex-wrap: nowrap;  /* prevent next line */
+}
+
+.cards:active{
+  cursor: grabbing;
+}
+.cards,
+.cards *{
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.cards img{
+  pointer-events: none;
+}
+/* ================= SINGLE CARD ================= */
+
+.card{
+   width: 280px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 1rem;
+   min-width: 280px;
+  flex-shrink: 0;
+}
+/* ================= TOP CARD ================= */
+
+.p1{
+  background-color: #c1ee91;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  width: 100%;
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px;
+
+  position: relative;
+}
+
+/* ================= TOP BAR ================= */
+
+.card-sub{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-sub button{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+
+  padding: 6px 10px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.card-sub p{
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ================= PRODUCT IMAGE ================= */
+
+.p1 img{
+  width: 70%;
+  margin: auto;
+  object-fit: contain;
+}
+
+/* ================= ADD BUTTON ================= */
+
+.card-sub2{
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+
+  padding: 8px 14px;
+
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================= BOTTOM CONTENT ================= */
+
+.p2{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.p2 h2{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.p2 h3{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.p2 p{
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px){
+
+  .cards{
+    padding: 1rem;
+  }
+
+  .card{
+    width: 100%;
+  }
+
+  .p1{
+    min-height: 300px;
+  }
+
+  .p2 h2{
+    font-size: 1.1rem;
+  }
+}
+
+/* .card1{
+  margin-left: 25vw;
+} */
+/*separates  */
+
+.card2 .p1{
+  background-color: #FFD884;
+}
+
+
+
+.card:not(.card1,.card8,.card9) img{
+  width: 100%;
+}
+.card3 .p1{
+  background-color: #B0E8C1;  
+}
+
+.card4 .p1{
+  background-color: #C1E4F8;
+}
+
+.card5 .p1{
+  background-color: #C0E571;
+}
+
+.card6 .p1{
+  background-color: #FFCB96;
+}
+
+.card7 .p1{
+  background-color: #FFD1B8;
+}
+
+.card8 .p1{
+  background-color: #CCE3FF;
+}
+
+.card9 .p1{
+  background-color: #AEE0F9;
+}
+
+.left,.right{
+  background-color: white;
+  color: black;
+  height: 50px;
+  width: 50px;
+  display: flex;
+ align-self: center;
+ align-items: center;
+ justify-content: center;
+ font-size: 2rem;
+ position: absolute;
+ z-index: 999;
+ border-radius: 50%;
+}
+
+
+.left{
+  left: 20px;
+}
+
+
+.right{
+  right: 20px;
+}
+
+.left:hover,.right:hover{
+  background-color: #2A2857;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.tea-btn{
+  margin-bottom: 100px;
 }
