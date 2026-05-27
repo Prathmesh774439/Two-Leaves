@@ -56,7 +56,7 @@ cards.addEventListener("mousemove", (e) => {
    ============================================= */
 
 const lenis = new Lenis({
-  lerp: 0.05,
+  lerp: 0.06,
   autoRaf: true,
 });
 
@@ -119,5 +119,16 @@ window.addEventListener('scroll', () => {
     nav?.classList.add('scrolled');
   } else {
     nav?.classList.remove('scrolled');
+  }
+});
+
+/* =============================================
+   LAZY LOAD FADE IN
+   ============================================= */
+document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+  if (img.complete) {
+    img.classList.add('loaded');
+  } else {
+    img.addEventListener('load', () => img.classList.add('loaded'));
   }
 });
