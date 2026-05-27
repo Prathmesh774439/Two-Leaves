@@ -299,7 +299,7 @@ nav {
   background-color: white;
   border: 1px solid black;
   border-radius: 4px;
-
+  color: black;
   padding: 6px 10px;
 
   font-size: 0.8rem;
@@ -531,15 +531,16 @@ nav {
   padding: 14px 23px;
   border-radius: 18px;
   border: 1px solid black;
-  background-color: #d8e6ff;
+  background-color: #adccf6;
   font-size: 1.6rem;
   font-family: reckless;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .vibe-tags button:hover {
-  background-color: #bcd2ff;
+  background-color: #799ade;
   transform: translateY(-2px);
 }
 
@@ -616,7 +617,7 @@ transform: rotate(-2deg);
   border-radius: 35px;
 
   background-color: white;
-
+  color: black;
   font-size: clamp(0.9rem, 1.2vw, 1rem);
   font-weight: 600;
 
@@ -817,7 +818,11 @@ transform: rotate(-2deg);
 .section6{
   /* background-color: red; */
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+
 
 .sec6-div{
   display: flex;
@@ -844,12 +849,14 @@ transform: rotate(-2deg);
   background-color: white;
   border-radius: 35px;
   border: 1px solid black;
+  font-weight: 800;
   color: black;
 }
 
 .sec6-div2 button:hover{
  background-color: orange;
  color: white;
+ transition: all 0.5s;
 }
 
 .section7{
@@ -1055,6 +1062,7 @@ margin-left: 15%;
   width: 100vw;
   min-height: 430px;
   display: grid;
+  flex-wrap: wrap;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   /* background-color: lightblue; */
@@ -1277,14 +1285,338 @@ button {
   color: rgb(205, 201, 201);
 }
 
-
 .footer-img {
   margin-top: 100px;
   width: 100%;
-  aspect-ratio: 16 / 6; /* keeps image ratio */
-  
-  background-image: url(./Assets/footer-img.png);
-  background-position: center;
+  aspect-ratio: 16 / 6;
+  display: flex;
+  justify-content: center;
+  margin-right: 10%;
+  align-items: flex-start;  /*add this */
+  background-image: url(./Assets/footer-img-copy.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center; /* optional */
+}
+
+.footer-img img {
+  width: 18%;
+  height: auto;
+}
+
+.footer-parag{
+  text-align: center;
+  font-size: 17px;
+  font-family: "Poppins",sans-serif;
+  color: rgb(33, 33, 33);
+  font-weight: 500;
+}
+
+/* =============================================
+   BUG FIXES — any screen size
+   ============================================= */
+
+.fixedNav {
+  position: fixed;
+  z-index: 100;
+}
+
+.cards {
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =============================================
+   MOBILE — 768px and below
+   ============================================= */
+@media (max-width: 768px) {
+
+  /* --- Nav --- */
+  nav {
+    justify-content: center;
+    min-height: 60px;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .nav1, .nav3 {
+    display: none;
+  }
+
+  .nav2 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --- Section 1 --- */
+  section.section1 {
+    padding-top: 0;
+    background-position: right center;
+    background-size: cover;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+  }
+
+  section.section1 nav {
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+
+  .section1-content {
+    width: 90%;
+    margin-left: 5%;
+    background-color: rgba(251, 249, 235, 0.82);
+    padding: 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+  }
+
+  /* --- Section 3 --- */
+  .sec3-data {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .vibe-tags {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .sec3-data2 p {
+    margin-left: 5%;
+  }
+
+  /* --- Section 5 --- */
+  .sec5-cards {
+    justify-content: center;
+  }
+
+  .sec5-card {
+    max-width: 90%;
+  }
+
+  .mini-div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .v-line {
+    display: none;
+  }
+
+  .mini-div p {
+    text-align: center;
+  }
+
+  .sec5-logo,
+  .journal-btn {
+    margin-left: 5%;
+  }
+
+  .sec5-title,
+  .sec8-title {
+    margin-left: 5%;
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+
+  /* --- Section 6 --- */
+  .sec6-div {
+    flex-wrap: wrap;
+  }
+
+  .sec6-div img {
+    width: 100%;
+  }
+
+  .sec6-div2 {
+    width: 100%;
+  }
+
+  /* --- Section 8 --- */
+  .sec8-cards {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* --- Section 9 --- */
+  .section9 {
+    height: auto;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .sec9-div {
+    width: 90%;
+    margin: auto;
+  }
+
+  .sec9-div h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  /* --- Footer --- */
+  .footer-contents {
+    width: 90%;
+  }
+
+  .footer-main {
+    width: 95%;
+    padding: 2rem;
+    gap: 30px;
+  }
+
+  .footer-img {
+    margin-right: 0;
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+
+/* =============================================
+   SMALL MOBILE — 480px and below
+   ============================================= */
+@media (max-width: 480px) {
+
+  .sec8-cards {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .nav2 img {
+    max-height: 55px;
+  }
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+
+/* --- Keyframes --- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes badgePop {
+  0%   { opacity: 0; transform: rotate(-2deg) scale(0.7); }
+  70%  { transform: rotate(-2deg) scale(1.08); }
+  100% { opacity: 1; transform: rotate(-2deg) scale(1); }
+}
+
+@keyframes navSlideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Reveal base state (hidden before JS fires) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.from-left {
+  transform: translateX(-50px);
+}
+
+.reveal.from-right {
+  transform: translateX(50px);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Stagger delays for child cards */
+.reveal-stagger > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger > *:nth-child(2) { transition-delay: 0.1s; }
+.reveal-stagger > *:nth-child(3) { transition-delay: 0.2s; }
+.reveal-stagger > *:nth-child(4) { transition-delay: 0.3s; }
+.reveal-stagger > *:nth-child(5) { transition-delay: 0.4s; }
+
+/* --- Page load: Hero --- */
+.section1-content {
+  animation: fadeUp 0.9s ease both;
+  animation-delay: 0.2s;
+}
+
+/* --- Page load: Nav --- */
+nav {
+  animation: navSlideDown 0.6s ease both;
+}
+
+/* --- Rotated badge buttons pop in when visible --- */
+.best,
+.discover-btn,
+.sec4-logo,
+.sec5-logo,
+.sec7-cardbtn,
+.journal-btn,
+.latte-btn,
+.sec7-cardbtn {
+  opacity: 0;
+}
+
+.best.visible,
+.discover-btn.visible,
+.sec4-logo.visible,
+.sec5-logo.visible,
+.sec7-cardbtn.visible,
+.journal-btn.visible,
+.latte-btn.visible {
+  animation: badgePop 0.6s ease forwards;
+}
+
+/* --- Smooth nav shadow on scroll --- */
+nav.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+/* --- Card hover lift (enhance existing) --- */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.sec5-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sec5-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sec8-card {
+  transition: transform 0.3s ease;
+}
+
+.sec8-card:hover {
+  transform: translateY(-6px);
 }
