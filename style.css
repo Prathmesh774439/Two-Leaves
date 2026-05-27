@@ -1011,3 +1011,280 @@ transform: rotate(-2deg);
   }
 
 }
+
+
+.section8{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+  
+}
+
+
+
+
+.journal-btn{
+   font-weight: 700;
+
+  background-color: #f09f54;
+
+  border: 1px solid black;
+
+  font-size: clamp(1rem, 2vw, 2.3rem);
+
+  font-family: "Exo 2", sans-serif;
+
+  border-radius: 10px;
+
+  padding: 6px 12px;
+
+  transform: rotate(-2deg);
+margin-left: 15%; 
+  width: fit-content;
+}
+
+.sec8-title{
+  font-size: clamp(1rem, 3vw, 4rem);
+ font-weight: 600;
+margin-left: 15%; 
+}
+.sec8-cards{
+  width: 100vw;
+  min-height: 430px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* background-color: lightblue; */
+  padding-left: 20px;
+}
+
+.sec8-card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 15px;
+ margin-top: 15%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sec8-card img{
+ width: 100%; 
+}
+
+.sec8-card1{
+  background-color: #2a2857;
+}
+.sec8-card2{
+  background-color: #2a2857;
+}
+.sec8-card3{
+  background-color: #2a2857;
+}
+.sec8-card4{
+  background-color: #2a2857;
+}
+
+.sec8-subdiv{
+  background-color: #c0dbff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.sec8-btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-weight: 900;
+}
+
+.tea-parent{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.tea-journal,.footer-btn{
+  padding: 15px;
+  border-radius: 35px;
+  background-color: #2a2857;
+  color: white;
+  font-weight: 700;
+  width: fit-content;
+
+}
+
+.tea-journal:hover,.footer-btn:hover{
+ background-color: white;
+  color: black;
+  font-size: 1rem;
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+.section9{
+  width: 100vw;
+  height: 85vh;
+  background: url(./Assets/back-9.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sec9-div{
+  height: 100%;
+  width: 30%;
+  background-color: #F26412;
+  border: 1px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  justify-content: space-around;
+  margin-left: 3%;
+  color: white;
+
+}
+
+.sec9-div h1{
+  font-size: 60px;
+  font-weight: 700;
+}
+.sec9-div p{
+ font-family: "Poppins", sans-serif;
+ font-weight: 500;
+ font-size: 22px;
+}
+.sec9-subcont{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sec9-div button{
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 35px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  padding: 12px 24px;
+  width: fit-content;
+}
+
+.sec9-div button:hover{
+ background-color: black;
+ color: white;
+ transition: all 0.5s;
+}
+
+footer {
+  background-color: #C0DBFF;
+  width: 100%;
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* important */
+  gap: 20px;
+}
+
+.footer-contents {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.footer-contSubdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* title */
+.footer-title {
+  font-size: 2.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+.footer-para {
+  font-size: 2rem;
+  text-align: start;
+}
+
+/* input */
+.input-tag {
+  background-color: white;
+  width: 280px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 12px 24px;
+}
+
+/* optional button styling if you have it */
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #000;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* icons */
+.footer-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
+}
+
+.footer-main{
+  display: flex;
+  flex-wrap: wrap;
+  background-color:#2a2857;
+  width: 90%;
+  min-height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 3rem;
+  color: white;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.footer-blocks h3{
+  font-size: 25px;
+}
+.footer-blocks ul li{
+  color: rgb(205, 201, 201);
+}
+
+
+.footer-img {
+  margin-top: 100px;
+  width: 100%;
+  aspect-ratio: 16 / 6; /* keeps image ratio */
+  
+  background-image: url(./Assets/footer-img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
